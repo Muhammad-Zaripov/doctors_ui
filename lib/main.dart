@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BookingHistoryTabBarWidget(),
+      home: BookingHistoryTabBarWidget(), // FavoriteTabBarWidget() bu 2 chisi
       debugShowCheckedModeBanner: false,
     );
   }

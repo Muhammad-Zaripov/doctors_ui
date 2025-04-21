@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/completed_screen/screen/completed_screen.dart';
 import '../screens/upcoming_screen/screen/upcoming_screen.dart';
-import 'favorite_tab_bar_widget.dart';
 
 class BookingHistoryTabBarWidget extends StatefulWidget {
   const BookingHistoryTabBarWidget({super.key});
@@ -16,7 +15,7 @@ class _BookingHistoryTabBarWidgetState
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -46,13 +45,7 @@ class _BookingHistoryTabBarWidgetState
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-          child: TabBarView(
-            children: [
-              UpcomingScreen(),
-              CompletedScreen(),
-              FavoriteTabBarWidget(),
-            ],
-          ),
+          child: TabBarView(children: [UpcomingScreen(), CompletedScreen()]),
         ),
       ),
     );
